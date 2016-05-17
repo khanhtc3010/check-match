@@ -14,6 +14,7 @@ class Sentence(object):
 					   .replace('\xE3\x80\x82','')\
 					   .replace('\x5C\x74','')\
 					   .replace('%20','')\
+					   .replace('…'.decode('utf-8'),'')\
 
 	@staticmethod
 	def convert_hiratext(sentence):
