@@ -9,13 +9,13 @@ class Sentence(object):
 
 	@staticmethod
 	def refine_sentence(sentence):
-		""" replace ['、' ; '。' ; ' ' ; '…' ; '.']  """
+		""" replace ['、' ; '。'; '\t' ; ' ' ; '.' ; '…' ]  """
 		return sentence.replace('\xE3\x80\x81','')\
 					   .replace('\xE3\x80\x82','')\
 					   .replace('\x5C\x74','')\
 					   .replace('%20','')\
-					   .replace('.'.decode('utf-8'),'')\
-					   .replace('…'.decode('utf-8'),'')\
+					   .replace('\x2E','')\
+					   .replace('\xE2\x80\xA6','')\
 
 	@staticmethod
 	def convert_hiratext(sentence):

@@ -5,7 +5,7 @@ from app import *
 
 @app.route('/')
 def index():
-    return "Hello, World!"
+	return "Hello, World!"
 
 @app.route('/check', methods=['GET'])
 def check_match_sentence():
