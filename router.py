@@ -13,6 +13,8 @@ def check_match_sentence():
 		args = request.args
 		src = args.get('src')
 		sen = args.get('sen')
+		print 'src= ', src
+		print 'sen= ', sen
 		return jsonify({'status': check_match(src, sen)})
 	except:
 		abort(400)
